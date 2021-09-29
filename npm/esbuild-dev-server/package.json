@@ -12,15 +12,15 @@
     "url": "https://github.com/Falldot/esbuild-dev-server/issues"
   },
   "optionalDependencies": {
-    "esbuild-dev-server-linux-x32": "0.1.0",
-    "esbuild-dev-server-linux-x64": "0.1.0",
-    "esbuild-dev-server-linux-arm": "0.1.0",
-    "esbuild-dev-server-linux-arm64": "0.1.0",
-    "esbuild-dev-server-win32-x32": "0.1.0",
-    "esbuild-dev-server-win32-x64": "0.1.0",
-    "esbuild-dev-server-win32-arm64": "0.1.0",
-    "esbuild-dev-server-darwin-x64": "0.1.0",
-    "esbuild-dev-server-darwin-arm64": "0.1.0"
+    "esbuild-dev-server-linux-x32": "0.2.0",
+    "esbuild-dev-server-linux-x64": "0.2.0",
+    "esbuild-dev-server-linux-arm": "0.2.0",
+    "esbuild-dev-server-linux-arm64": "0.2.0",
+    "esbuild-dev-server-win32-x32": "0.2.0",
+    "esbuild-dev-server-win32-x64": "0.2.0",
+    "esbuild-dev-server-win32-arm64": "0.2.0",
+    "esbuild-dev-server-darwin-x64": "0.2.0",
+    "esbuild-dev-server-darwin-arm64": "0.2.0"
   },
   "keywords": [
     "esbuild-dev-server",

@@ -76,7 +76,7 @@ build-darwin-arm-64:
 	go build cmd/devserver/devserver.go
 	move devserver.exe npm/esbuild-dev-server-darwin-arm64
 
-npm:
+publish:
 	cd npm/esbuild-dev-server && npm publish
 	cd npm/esbuild-dev-server-win32-x32 && npm publish
 	cd npm/esbuild-dev-server-win32-x64 && npm publish
