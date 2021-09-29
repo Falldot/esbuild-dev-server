@@ -1,5 +1,7 @@
 # esbuild-dev-server
 
+## Only win64
+
 > This plugin allows you to start a local server with hot reloading with [Esbuild](https://esbuild.github.io/)
 
 ## Installation
