@@ -1,0 +1,32 @@
+{
+  "name": "esbuild-dev-server-win32-arm64",
+  "version": "0.2.0",
+  "description": "The Windows arm 64-bit binary for esbuild-dev-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falldot/esbuild-dev-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Falldot/esbuild-dev-server/issues"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "keywords": [
+    "esbuild-dev-server",
+    "esbuild",
+    "dev",
+    "server",
+    "live",
+    "live server",
+    "dev server",
+    "node",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Vladislav Fedotov",
+  "license": "MIT"
+}

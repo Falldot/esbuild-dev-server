@@ -16,7 +16,7 @@ func main() {
 		},
 		Tsconfig: "lib/tsconfig.json",
 		Write:    true,
-		Outdir:   "npm/lib",
+		Outdir:   "npm/esbuild-dev-server/lib",
 	})
 
 	if len(result.Errors) > 0 {

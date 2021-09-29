@@ -3,6 +3,7 @@
 // MIT License web page: https://opensource.org/licenses/MIT
 import { request } from "http";
 import { spawn } from "child_process";
+import os = require('os');
 
 /**
 * Dev server options.
@@ -35,7 +36,8 @@ export const setOptions = (devServerOptions: DevServerOptions): void => {
 * @return {Promise<Error | number | null>}
 */
 export const startServer = (): Promise<Error | number | null> => new Promise((resolve, reject) => {
-    const ls = spawn(__dirname + "/../devserver", [":" + Options.Port, Options.Index, Options.StaticDir, Options.WatchDir]);
+    const platform = `esbuild-dev-server-${process.platform}-${os.arch()}`;
+    const ls = spawn(__dirname + `/../../${platform}/devserver`, [":" + Options.Port, Options.Index, Options.StaticDir, Options.WatchDir]);
     ls.stdout.on("data", data => {
         `${data}` === "Reload" ? Options.OnLoad() : console.log(`${data}`);
     });

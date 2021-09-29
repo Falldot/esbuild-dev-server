@@ -17,7 +17,10 @@ esbuild-darwin-arm64@0.13.2:
   resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.13.2.tgz#2bc42bc24a3a9779fe5569d5f2ab4c39bd3483b7"
   integrity sha512-bD4oAyPZdzOWEA/JoX0sAitOhjJRwhomhWMeyRyowtlVQhQleG2ijRUKTvkq4CAvSobrW5EnZxjvHNKJ5L7zJg==
 
-esbuild-dev-server@../npm:
+esbuild-dev-server-win32-x64@../npm/esbuild-dev-server-win32-x64:
+  version "0.1.0"
+
+esbuild-dev-server@../npm/esbuild-dev-server:
   version "0.1.0"
 
 esbuild-freebsd-64@0.13.2:

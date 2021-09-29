@@ -1,9 +1,7 @@
 {
-  "name": "esbuild-dev-server",
-  "version": "0.1.0",
-  "description": "An fast JavaScript hot dev local server.",
-  "types": "lib/esbuild-dev-server.d.ts",
-  "main": "lib/esbuild-dev-server.js",
+  "name": "esbuild-dev-server-linux-arm",
+  "version": "0.2.0",
+  "description": "The Linux arm binary for esbuild-dev-server",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Falldot/esbuild-dev-server.git"
@@ -11,6 +9,12 @@
   "bugs": {
     "url": "https://github.com/Falldot/esbuild-dev-server/issues"
   },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
   "keywords": [
     "esbuild-dev-server",
     "esbuild",

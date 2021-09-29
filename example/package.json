@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.13.2",
-    "esbuild-dev-server": "../npm"
+    "esbuild-dev-server": "../npm/esbuild-dev-server",
+    "esbuild-dev-server-win32-x64": "../npm/esbuild-dev-server-win32-x64"
   }
 }
