@@ -1,7 +1,5 @@
 # esbuild-dev-server
 
-## Only win64
-
 > This plugin allows you to start a local server with hot reloading with [Esbuild](https://esbuild.github.io/)
 
 ## Installation
@@ -26,7 +24,7 @@ go get github.com/Falldot/esbuild-dev-server
 - `options.OnLoad`, `() => void`: local server restart event.
 
 ## How to use?
-### Node.js
+### Node.js only win64
 ```js
 const {build, formatMessages} = require("esbuild");
 const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-dev-server");
