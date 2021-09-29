@@ -1,0 +1,6 @@
+dist
+example/dist
+example/node_modules
+lib/node_modules
+npm/lib
+npm/devserver.exe

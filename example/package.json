@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vladislav Fedotov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node build/build.js",
+    "gostart": "go run build/build.go"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.2",
+    "esbuild-dev-server": "../npm"
+  }
+}

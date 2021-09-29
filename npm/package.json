@@ -1,0 +1,28 @@
+{
+  "name": "esbuild-dev-server",
+  "version": "0.1.0",
+  "description": "An fast JavaScript hot dev local server.",
+  "types": "lib/esbuild-dev-server.d.ts",
+  "main": "lib/esbuild-dev-server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falldot/esbuild-dev-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Falldot/esbuild-dev-server/issues"
+  },
+  "keywords": [
+    "esbuild-dev-server",
+    "esbuild",
+    "dev",
+    "server",
+    "live",
+    "live server",
+    "dev server",
+    "node",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Vladislav Fedotov",
+  "license": "MIT"
+}
