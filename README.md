@@ -15,6 +15,14 @@ yarn add esbuild-dev-server -D
 ```
 go get github.com/Falldot/esbuild-dev-server
 ```
+## Configuration
+
+- `options.Port`, `string`: local server start port.
+- `options.Index`, `string`: path to index html file.
+- `options.StaticDir`, `string`: path to static files (js, css, img ...).
+- `options.WatchDir`, `string`: path to working directory.
+- `options.OnLoad`, `() => void`: local server restart event.
+
 ## How to use?
 ### Node.js
 ```js
@@ -29,21 +37,14 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 		sourcemap: true,
 		target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
 		outdir: "dist/js",
-		// Important field!!!!!
 		incremental: true,
 		plugins: [
-			// esbuild-dev-server plugin
 			esBuildDevServer({
-				Port: "8080", 				// Port start local server
-				Index: "dist/index.html",	// Root html file
-				// Stacic files
-                // dist/js, dist/css ...
+				Port: "8080",
+				Index: "dist/index.html",
 				StaticDir: "dist",
-				// Working directory
 				WatchDir: "src",
-				// Event reload local server
 				OnLoad: async () => {
-					// Error handler and rebuild esbuild
 					try {
 						await builder.rebuild();
 						await sendReload();
@@ -55,7 +56,6 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 			})
 		],
 	});
-	// Starting...
 	await startServer();
 })();
 ```
@@ -87,19 +87,13 @@ func main() {
 			{api.EngineSafari, "11"},
 			{api.EngineEdge, "16"},
 		},
-		// Important field!!!!!
 		Incremental: true,
 		Plugins: []api.Plugin{
-            // esbuild-dev-server plugin
 			devserver.Plugin(devserver.Options{
-				Port:      ":8080",           // Port start local server
-				Index:     "dist/index.html", // Root html file
-                // Stacic files
-                // dist/js, dist/css ...
+				Port:      ":8080",
+				Index:     "dist/index.html",
 				StaticDir: "dist",
-                // Working directory
 				WatchDir:  "src",
-                // Event reload local server
 				OnReload: func() {
 					result.Rebuild()
 				},
@@ -110,7 +104,6 @@ func main() {
 		log.Fatalln(result.Errors)
 	}
 
-	// Starting...
 	if err := devserver.Start(); err != nil {
         log.Fatalln(result.Errors)
     }
