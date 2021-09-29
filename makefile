@@ -1,5 +1,5 @@
 jstest:
-	cd example && yarn add -D ../npm/esbuild-dev-server && yarn add -D ../npm/esbuild-dev-server-win32-x64 && yarn start
+	cd example && yarn add -D ../npm/esbuild-dev-server && yarn start
 
 gotest:
 	cd example && yarn gostart

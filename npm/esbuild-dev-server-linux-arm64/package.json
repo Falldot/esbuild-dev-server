@@ -13,7 +13,7 @@
     "linux"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
   "keywords": [
     "esbuild-dev-server",
