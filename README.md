@@ -24,7 +24,7 @@ go get github.com/Falldot/esbuild-dev-server
 - `options.OnLoad`, `() => void`: local server restart event.
 
 ## How to use?
-### Node.js only win64
+### Node.js
 ```js
 const {build, formatMessages} = require("esbuild");
 const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-dev-server");
