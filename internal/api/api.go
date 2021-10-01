@@ -10,14 +10,16 @@ import (
 )
 
 type DevServer struct {
-	hub *ws.Hub
+	hub    *ws.Hub
+	reload []byte
 }
 
 func New() *DevServer {
 	hub := ws.NewHub()
 	go hub.Run()
 	return &DevServer{
-		hub: hub,
+		hub:    hub,
+		reload: []byte("reload"),
 	}
 }
 
@@ -52,6 +54,6 @@ func (ds *DevServer) SendErrorBytes(mes []byte) {
 }
 
 func (ds *DevServer) SendReload() {
-	message := bytes.TrimSpace([]byte("reload"))
+	message := bytes.TrimSpace(ds.reload)
 	ds.hub.Broadcast <- message
 }

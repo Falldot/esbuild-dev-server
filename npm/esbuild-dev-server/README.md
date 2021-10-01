@@ -61,38 +61,30 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 ```
 ### Golang
 ```go
-package main
-
-import (
-	"log"
-
-	devserver "github.com/Falldot/esbuild-dev-server"
-	"github.com/evanw/esbuild/pkg/api"
-)
-
 func main() {
 	var result api.BuildResult
 
 	result = api.Build(api.BuildOptions{
-		EntryPoints:       []string{"src/index.js"},
+		EntryPoints:       []string{"src/index.ts"},
 		Bundle:            true,
 		MinifyWhitespace:  true,
 		MinifyIdentifiers: true,
 		MinifySyntax:      true,
-		Outdir:      "dist/js",
-		Write:       true,
+		Sourcemap:         api.SourceMapInlineAndExternal,
+		Outdir:            "public/js",
+		Write:             true,
 		Engines: []api.Engine{
-			{api.EngineChrome, "58"},
-			{api.EngineFirefox, "57"},
-			{api.EngineSafari, "11"},
-			{api.EngineEdge, "16"},
+			{Name: api.EngineChrome, Version: "58"},
+			{Name: api.EngineFirefox, Version: "57"},
+			{Name: api.EngineSafari, Version: "11"},
+			{Name: api.EngineEdge, Version: "16"},
 		},
 		Incremental: true,
 		Plugins: []api.Plugin{
 			devserver.Plugin(devserver.Options{
 				Port:      ":8080",
-				Index:     "dist/index.html",
-				StaticDir: "dist",
+				Index:     "public/index.html",
+				StaticDir: "public",
 				WatchDir:  "src",
 				OnReload: func() {
 					result.Rebuild()
@@ -105,7 +97,7 @@ func main() {
 	}
 
 	if err := devserver.Start(); err != nil {
-        log.Fatalln(result.Errors)
-    }
+		log.Fatalln(result.Errors)
+	}
 }
 ```

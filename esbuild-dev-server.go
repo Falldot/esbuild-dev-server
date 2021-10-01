@@ -1,6 +1,8 @@
 package devserver
 
 import (
+	"log"
+
 	"github.com/Falldot/esbuild-dev-server/internal/server"
 	"github.com/evanw/esbuild/pkg/api"
 )
@@ -23,6 +25,7 @@ func Plugin(options Options) api.Plugin {
 							Kind:  api.ErrorMessage,
 							Color: true,
 						})
+						log.Println(strs[0])
 						server.SetError(strs[0])
 					} else {
 						server.Reload()

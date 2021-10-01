@@ -4,12 +4,12 @@ example/node_modules
 lib/node_modules
 
 npm/lib
-npm/esbuild-dev-server-darwin-x64/devserver.exe
-npm/esbuild-dev-server-darwin-arm64/devserver.exe
-npm/esbuild-dev-server-linux-x32/devserver.exe
-npm/esbuild-dev-server-linux-x64/devserver.exe
-npm/esbuild-dev-server-linux-arm/devserver.exe
-npm/esbuild-dev-server-linux-arm64/devserver.exe
+npm/esbuild-dev-server-darwin-x64/devserver
+npm/esbuild-dev-server-darwin-arm64/devserver
+npm/esbuild-dev-server-linux-x32/devserver
+npm/esbuild-dev-server-linux-x64/devserver
+npm/esbuild-dev-server-linux-arm/devserver
+npm/esbuild-dev-server-linux-arm64/devserver
 npm/esbuild-dev-server-win32-x32/devserver.exe
 npm/esbuild-dev-server-win32-x64/devserver.exe
 npm/esbuild-dev-server-win32-arm64/devserver.exe

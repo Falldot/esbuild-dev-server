@@ -23,58 +23,40 @@ build-all:
 		build-darwin-arm-64
 
 build-win-32:
-	set GOOS=windows
-	set GOARCH=386
-	go build cmd/devserver/devserver.go
+	set GOOS=windows&& set GOARCH=386&& go build cmd/devserver/devserver.go
 	move devserver.exe npm/esbuild-dev-server-win32-x32
 
 build-win-64:
-	set GOOS=windows
-	set GOARCH=amd64
-	go build cmd/devserver/devserver.go
+	set GOOS=windows&& set GOARCH=amd64&& go build cmd/devserver/devserver.go
 	move devserver.exe npm/esbuild-dev-server-win32-x64
 
 build-win-arm-64:
-	set GOOS=windows
-	set GOARCH=arm64
-	go build cmd/devserver/devserver.go
+	set GOOS=windows&& set GOARCH=arm64&& go build cmd/devserver/devserver.go
 	move devserver.exe npm/esbuild-dev-server-win32-arm64
 
 build-linux-32:
-	set GOOS=linux
-	set GOARCH=386
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-linux-x32
+	set GOOS=linux&& set GOARCH=386&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-linux-x32
 
 build-linux-64:
-	set GOOS=linux
-	set GOARCH=amd64
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-linux-x64
+	set GOOS=linux&& set GOARCH=amd64&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-linux-x64
 
 build-linux-arm:
-	set GOOS=linux
-	set GOARCH=arm
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-linux-arm
+	set GOOS=linux&& set GOARCH=arm&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-linux-arm
 
 build-linux-arm-64:
-	set GOOS=linux
-	set GOARCH=arm64
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-linux-arm64
+	set GOOS=linux&& set GOARCH=arm64&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-linux-arm64
 
 build-darwin-64:
-	set GOOS=darwin
-	set GOARCH=amd64
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-darwin-x64
+	set GOOS=darwin&& set GOARCH=amd64&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-darwin-x64
 
 build-darwin-arm-64:
-	set GOOS=darwin
-	set GOARCH=arm64
-	go build cmd/devserver/devserver.go
-	move devserver.exe npm/esbuild-dev-server-darwin-arm64
+	set GOOS=darwin&& set GOARCH=arm64&& go build cmd/devserver/devserver.go
+	move devserver npm/esbuild-dev-server-darwin-arm64
 
 publish:
 	cd npm/esbuild-dev-server && npm publish

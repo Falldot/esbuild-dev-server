@@ -1,6 +1,6 @@
 {
   "name": "esbuild-dev-server-linux-x32",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The Linux 32-bit binary for esbuild-dev-server",
   "repository": {
     "type": "git",

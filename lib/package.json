@@ -1,10 +1,10 @@
 {
   "name": "esbuild-dev-server",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An fast JavaScript hot dev local server.",
   "main": "src/esbuild-dev-server.js",
   "scripts": {
-    "build": "tsc --declaration --emitDeclarationOnly --outfile ../npm/lib/esbuild-dev-server.d.ts",
+    "build": "tsc --declaration --emitDeclarationOnly --outfile ../npm/esbuild-dev-server/lib/esbuild-dev-server.d.ts",
     "lint": "eslint src"
   },
   "repository": {

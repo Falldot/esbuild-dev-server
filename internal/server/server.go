@@ -37,7 +37,7 @@ func Reload() {
 }
 
 func StartDevServer() error {
-	log.Println("Starting reload server.")
+	log.Println("Starting dev server.")
 
 	server = api.New()
 
@@ -69,8 +69,8 @@ func StartDevServer() error {
 
 	go watcher.Watch(config.WatchDir, config.OnReload)
 
-	log.Println("Reload server started.")
-	log.Println("Reload server listening at", config.Port)
+	log.Println("Dev server started.")
+	log.Println("http://localhost" + config.Port + "/")
 
 	IsStart = true
 

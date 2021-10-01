@@ -9,29 +9,12 @@ import (
 const HotReloadScript = `
 <script type="text/javascript">
 function tryConnectToReload(address) {
-	var conn = new WebSocket(address);
-
-	conn.onclose = function() {
-		setTimeout(function() {
-			tryConnectToReload(address);
-		}, 2000);
-	};
-
-	conn.onmessage = function(evt) {
-		evt.data === "reload" ? location.reload() : console.error(evt.data);
-	};
+    const conn = new WebSocket(address);
+    conn.onclose = () => setTimeout(() => tryConnectToReload(address), 2000);
+    conn.onmessage = evt => evt.data === "reload" ? location.reload() : console.error(evt.data);
 }
 try {
-    if (window["WebSocket"]) {
-        try {
-            tryConnectToReload("ws://localhost{port}/connect");
-        }
-        catch (ex) {
-            tryConnectToReload("wss://localhost{port}/connect");
-        }
-    } else {
-        console.log("Your browser does not support WebSockets, cannot connect to the Reload service.");
-    }
+    window["WebSocket"] ? tryConnectToReload("ws://localhost{port}/connect") : console.log("Your browser does not support WebSockets, cannot connect to the Reload service.");
 } catch (ex) {
     console.error('Exception during connecting to Reload:', ex);
 }
