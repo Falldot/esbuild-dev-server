@@ -61,6 +61,15 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 ```
 ### Golang
 ```go
+package main
+
+import (
+	"log"
+
+	devserver "github.com/Falldot/esbuild-dev-server"
+	"github.com/evanw/esbuild/pkg/api"
+)
+
 func main() {
 	var result api.BuildResult
 
