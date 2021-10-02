@@ -36,13 +36,13 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 		minify: false,
 		sourcemap: true,
 		target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
-		outdir: "dist/js",
+		outdir: "public/js",
 		incremental: true,
 		plugins: [
 			esBuildDevServer({
 				Port: "8080",
-				Index: "dist/index.html",
-				StaticDir: "dist",
+				Index: "public/index.html",
+				StaticDir: "public",
 				WatchDir: "src",
 				OnLoad: async () => {
 					try {
