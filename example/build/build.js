@@ -13,8 +13,8 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 		plugins: [
 			esBuildDevServer({
 				Port: "8080",
-				Index: "dist/index.html",
-				StaticDir: "dist",
+				Index: "public/index.html",
+				StaticDir: "public",
 				WatchDir: "src",
 				OnLoad: async () => {
 					try {
@@ -28,7 +28,7 @@ const {esBuildDevServer, startServer, sendError, sendReload} = require("esbuild-
 			})
 		],
 		target: 'chrome90',
-		outdir: "dist/js",
+		outdir: "public/js",
 	})
 	await startServer()
 })()

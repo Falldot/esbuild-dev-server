@@ -22,8 +22,8 @@ func main() {
 		Plugins: []api.Plugin{
 			devserver.Plugin(devserver.Options{
 				Port:      ":8080",
-				Index:     "dist/index.html",
-				StaticDir: "dist",
+				Index:     "public/index.html",
+				StaticDir: "public",
 				WatchDir:  "src",
 				OnReload: func() {
 					result.Rebuild()
@@ -31,7 +31,7 @@ func main() {
 			}),
 		},
 		Incremental: true,
-		Outdir:      "dist/js",
+		Outdir:      "public/js",
 		Write:       true,
 	})
 	if len(result.Errors) > 0 {

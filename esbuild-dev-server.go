@@ -3,18 +3,20 @@ package devserver
 import (
 	"log"
 
-	"github.com/Falldot/esbuild-dev-server/internal/server"
+	plugin "github.com/Falldot/esbuild-dev-server/internal/api"
 	"github.com/evanw/esbuild/pkg/api"
 )
 
-type Options server.DevServerOptions
+type Options plugin.DevServer
+
+var server plugin.DevServer
 
 func Start() error {
-	return server.StartDevServer()
+	return server.Start()
 }
 
 func Plugin(options Options) api.Plugin {
-	server.SetOptions(server.DevServerOptions(options))
+	server = plugin.DevServer(options)
 	return api.Plugin{
 		Name: "dev-server",
 		Setup: func(pb api.PluginBuild) {
@@ -26,9 +28,9 @@ func Plugin(options Options) api.Plugin {
 							Color: true,
 						})
 						log.Println(strs[0])
-						server.SetError(strs[0])
+						server.SendError(strs[0])
 					} else {
-						server.Reload()
+						server.SendReload()
 					}
 				}
 			})

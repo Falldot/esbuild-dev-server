@@ -1,6 +1,6 @@
 {
   "name": "esbuild-dev-server-linux-arm",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The Linux arm binary for esbuild-dev-server",
   "repository": {
     "type": "git",

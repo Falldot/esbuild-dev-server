@@ -15,8 +15,6 @@ func Watch(dir string, action func()) {
 	}
 	defer watcher.Close()
 
-	events := make([]fsnotify.Event, 0)
-
 	done := make(chan bool)
 	go func() {
 		for {
@@ -25,34 +23,11 @@ func Watch(dir string, action func()) {
 				if !ok {
 					return
 				}
-				events = append(events, event)
-
-				if len(events) > 1 {
-					if events[0] == events[1] && event.Op&fsnotify.Write == fsnotify.Write {
-						action()
-						events = make([]fsnotify.Event, 0)
-						continue
-					} else if events[0] != events[1] {
-						for _, event := range events {
-							if event.Op&fsnotify.Write == fsnotify.Write || event.Op&fsnotify.Remove == fsnotify.Remove || event.Op&fsnotify.Rename == fsnotify.Rename {
-								action()
-							}
-							if event.Op&fsnotify.Create == fsnotify.Create {
-								walk(event.Name, watcher)
-								events = make([]fsnotify.Event, 0)
-							}
-						}
-					}
+				if event.Op&fsnotify.Write == fsnotify.Write || event.Op&fsnotify.Remove == fsnotify.Remove || event.Op&fsnotify.Rename == fsnotify.Rename {
+					action()
 				}
-				if len(events) > 0 {
-					if event.Op&fsnotify.Create == fsnotify.Create {
-						walk(event.Name, watcher)
-						events = make([]fsnotify.Event, 0)
-					}
-					if event.Op&fsnotify.Remove == fsnotify.Remove || event.Op&fsnotify.Rename == fsnotify.Rename {
-						action()
-						events = make([]fsnotify.Event, 0)
-					}
+				if event.Op&fsnotify.Create == fsnotify.Create {
+					walk(event.Name, watcher)
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {

@@ -1,6 +1,6 @@
 {
   "name": "esbuild-dev-server-linux-x64",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The Linux 64-bit binary for esbuild-dev-server",
   "repository": {
     "type": "git",

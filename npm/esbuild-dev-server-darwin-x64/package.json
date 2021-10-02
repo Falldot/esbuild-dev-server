@@ -1,6 +1,6 @@
 {
   "name": "esbuild-dev-server-darwin-x64",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The Darwin 64-bit binary for esbuild-dev-server",
   "repository": {
     "type": "git",

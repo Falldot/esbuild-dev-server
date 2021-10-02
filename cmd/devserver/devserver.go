@@ -5,12 +5,13 @@ import (
 	"log"
 	"os"
 
-	"github.com/Falldot/esbuild-dev-server/internal/server"
+	"github.com/Falldot/esbuild-dev-server/internal/api"
 )
 
 func main() {
 	args := os.Args[1:]
-	server.SetOptions(server.DevServerOptions{
+
+	server := api.DevServer{
 		Port:      args[0],
 		Index:     args[1],
 		StaticDir: args[2],
@@ -18,8 +19,8 @@ func main() {
 		OnReload: func() {
 			fmt.Print("Reload")
 		},
-	})
-	if err := server.StartDevServer(); err != nil {
+	}
+	if err := server.Start(); err != nil {
 		log.Fatalln(err)
 	}
 }
