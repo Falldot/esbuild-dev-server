@@ -1,0 +1,37 @@
+{
+  "name": "esbuild-dev-server-darwin-x64",
+  "version": "0.3.0",
+  "description": "The Darwin 64-bit binary for esbuild-dev-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falldot/esbuild-dev-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Falldot/esbuild-dev-server/issues"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "esbuild-dev-server",
+    "esbuild",
+    "dev",
+    "server",
+    "live",
+    "live server",
+    "dev server",
+    "node",
+    "javascript",
+    "typescript",
+    "hot",
+    "reload",
+    "hot reload",
+    "serve",
+    "web"
+  ],
+  "author": "Vladislav Fedotov",
+  "license": "MIT"
+}

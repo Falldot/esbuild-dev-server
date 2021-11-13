@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vladislav Fedotov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "js-start": "node esbuild.config.js",
+    "go-start": "go run esbuild.config.go"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.2",
+    "esbuild-dev-server": "../npm/esbuild-dev-server",
+    "esbuild-dev-server-win32-x64": "../npm/esbuild-dev-server-win32-x64"
+  }
+}

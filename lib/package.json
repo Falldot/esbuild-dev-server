@@ -1,0 +1,45 @@
+{
+  "name": "esbuild-dev-server",
+  "version": "0.3.0",
+  "description": "An fast JavaScript hot dev local server.",
+  "main": "src/esbuild-dev-server.js",
+  "scripts": {
+    "build": "tsc --declaration --emitDeclarationOnly --outfile ../npm/esbuild-dev-server/lib/esbuild-dev-server.d.ts",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falldot/esbuild-dev-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Falldot/esbuild-dev-server/issues"
+  },
+  "keywords": [
+    "esbuild-dev-server",
+    "esbuild",
+    "dev",
+    "server",
+    "live",
+    "live server",
+    "dev server",
+    "node",
+    "javascript",
+    "typescript",
+    "hot",
+    "reload",
+    "hot reload",
+    "serve",
+    "web"
+  ],
+  "author": "Vladislav Fedotov",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3"
+  }
+}
